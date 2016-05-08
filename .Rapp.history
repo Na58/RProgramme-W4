@@ -1,0 +1,256 @@
+FALSE & FALSE
+TRUE & c(TRUE, FALSE, FALSE)
+TRUE && c(TRUE, FALSE, FALSE)
+TRUE | c(TRUE, FALSE, FALSE)
+TRUE || c(TRUE, FALSE, FALSE)
+5 > 8 || 6 != 8 && 4 > 3.9
+isTRUE(6>4)
+identical('twins', 'twins')
+xor(5 == 6, !FALSE)
+ints <- sample(10)
+ints
+ints > 5
+which(ints>7)
+any(ints<0)
+all(ints>0)
+Sys.Date()
+mean(c(2,4,5))
+submit()
+boring_function('My first function!')
+boring_function
+submit()
+my_mean(c(4,5,10))
+submit()
+remainder(5)
+remainder(11,5)
+remainder(divisor=11,num=5)
+remainder(4,div = 2)
+args(remainder)
+submit()
+submit
+submit()
+skip()
+submit()
+skip()
+library(swirl)
+swirl()
+d1 <- Sys.Date()
+class(d1)
+unclass(d1)
+d1
+d2 <- as.Date("1969-01-01")
+unclass(d2)
+t1 <- Sys.time()
+t1
+class()
+class(t1)
+unclass(t1)
+t2 <- as.POSIXlt(Sys.time())
+class(t2)
+t2
+unclass(t2)
+str(unclass(t2))
+t2$min
+weekdays(d1)
+months(t1)
+quarters(t2)
+t3 <- "October 17, 1986 08:24"
+t4 <- strptime(t3,"%B %d, %Y %H:%M")
+t4
+class(t4)
+Sys.time() > t1
+Sys.time() - t1
+difftime(Sys.time(), t1, units = 'days')
+?rnorm
+?tapply
+?runif
+runin(20)
+runif(20)
+?gl
+gl(3,10)
+?runif
+?rnorm
+?gl
+x <- gl(3,10)
+x
+?colMeans
+x <- c(female, male)
+x <- gl(1,2)
+y <- gl(2,2)
+interaction(x,y)
+z <- gl(2,1)
+interaction(z,y)
+library(datasets)
+data(iris)
+?iris
+print(iris[1,1])
+print(iris[1,])
+s <- split(iris, iris$Sepal.Length)
+a <- split(iris,iris$Species)
+lapply(a,mean colMeans(iris[,c(Sepal.Length,Sepal.Width)]))
+lapply(a,function(iris) colMeans(iris[,c(Sepal.Length,Sepal.Width)]))
+lapply(a,function(iris) colMeans(iris[,c("Sepal.Length","Sepal.Width")]))
+colMeans(iris)
+apply(iris, 2, mean)
+apply(iris[, 1:4], 1, mean)
+apply(iris[, 1:4], 2, mean)
+library(datasets)
+data(mtcars)
+?mtcars
+print(mtcars)
+split(mtcars$mpg, mtcars$cyl)
+sapply(mtcars, cyl, mean)
+sapply(split(mtcars$mpg, mtcars$cyl), mean)
+tapply(mtcars$mpg, mtcars$cyl, mean)
+apply(mtcars, 2, mean)
+?with
+with(mtcars, tapply(mpg, cyl, mean))
+tapply(mpg, cyl, mean)
+mean(mtcars$mpg, mtcars$cyl)
+tapply(mtcars$hp, mtcars$cyl, mean)
+209.21429-82.63636
+debug(ls)
+ls
+library(swirl)
+swirl()
+head(flags)
+dim(flags)
+class(flags)
+cls_list <- lapply(flags,class)
+cls_list
+class(cls_list)
+as.character(cls_list)
+cls_vect <- sapply(flags,class)
+class(cls_vect)
+sum(flags$orange)
+flag_colors <- flags[,11:17]
+head(flag_colors)
+lapply(flag_colors,sum)
+sapply(flag_colors,sum)
+sapply(flag_colors,mean)
+flag_shapes <- flags[,19:23]
+lapply(flag_shapes,range)
+shape_mat <- sapply(flag_shapes, rage)
+shape_mat <- sapply(flag_shapes, range)
+shape_mat
+class(shape_mat)
+unique(c(3, 4, 5, 5, 5, 6, 6))
+unique_vals <- lapply(flags,unique)
+unique_vals
+sapply(unique_vals,length)
+sapply(flags,unique)
+lapply(unique_vals,function(elem) elem[2])
+sapply(flags,unique)
+vapply(flags,unique,numeric(1))
+ok()
+sapply(flags,class)
+vapply(flags,class,character(1))
+?tapply
+table(flags$landmass)
+table(flags$animate)
+tapply(flags$animate,flags$landmass,mean)
+tapply(flags$population,flags$red,summary)
+tapply(flags$population,flags$landmass,summary)
+?inversion
+?solve
+?rnorm
+?rpois
+set.seed(1)
+rpois(5, 2)
+?set.seed
+set.seed(10)#
+x <- rep(0:1, each = 5)#
+e <- rnorm(10, 0, 20)#
+y <- 0.5 + 2 * x + e
+plot(x,y)
+library(datasets)#
+Rprof()#
+fit <- lm(y ~ x1 + x2)#
+Rprof(NULL)
+library(swirl)
+library(swirl)
+swirl()
+ls(plants)
+ls()
+class(plants)
+dim(plants)
+nrow(plants)
+ncol(plants)
+object.size(plants)
+names(plants)
+head(plants)
+head(plants,10)
+tail(plants,15)
+summary(plants)
+table(plants$Active_Growth_Period)
+str(plants)
+swirl()
+swirl()
+?sample
+sample(1:6,4,replace=TRUE)
+sample(1:6,4,replace=TRUE)
+sample(1:20,10)
+LETTERS
+sample(LETTERS)
+flips <- sample(c(0,1), 100, replace = FALSE, prob = c(0.3, 0.7))
+flips <- sample(c(0,1), 100, replace = TRUE, prob = c(0.3, 0.7))
+flips
+sum(flips)
+?rbinom
+rbinom(1,size = 100, prob = 0.7)
+flips2 <- rbinom(1,size=100,prob=0.7)
+flips2 <- rbinom(100,size=1,prob=0.7)
+flips2
+sum(flips2)
+?rnorm
+rnorm(10)
+rnorm(10,mean=100,sd=25)
+rpois(5,10)
+my_pois <- replicate(100,rpois(5,10))
+my_pois
+cm <- colMeans(my_pois)
+hist(cm)
+data(cars)
+?cars
+head(cars)
+plot(cars)
+?plot
+plot(x=cars$speed,y=cars$dist)
+plot(x=cars$dist, y=cars$speed)
+plot(x=cars$speed, y=cars$dist, xlab = "Speed")
+plot(x=cars$speed, y=cars$dist, xlab = "Speed", ylab = "Stopping Distance")
+plot(x=cars$speed, y=cars$dist, ylab = "Stopping Distance")
+plot(x=cars$speed, y=cars$dist, xlab = "Speed", ylab = "Stopping Distance")
+plot(cars, main = "My Plot")
+plot(cars, sub = "My Plot Subtitle")
+plot(cars, col=2)
+plot(cars,xlim = c(10,15))
+plot(cars,pch = 2)
+data(mtcars)
+?boxplot
+play()
+head(mtcars)
+nxt()
+boxplot(mpg~cyl)
+boxplot(formula = mpg~cyl)
+boxplot(mtcars, formula = mpg~cyl)
+boxplot(formula = mpg~cyl, data = mtcars)
+hist(mtcars$mpg)
+getwd()
+setwd("/Users/CutiePie/Desktop/Coursera-R/RPro/Week4/rprog-data-ProgAssignment3-data")
+getwd()
+x <- c(1,2,3)
+1 in x
+?split
+?data
+?subset
+?complete.case
+?numeric
+?as.numeri
+?as.numeric
+?min
+?factor
+read.csv("outcome-of-care-measures test.csv")
+a <- read.csv("outcome-of-care-measures test.csv")
+head(a)
+?order
